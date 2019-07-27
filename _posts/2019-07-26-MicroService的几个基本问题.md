@@ -5,15 +5,49 @@ description: "Sample post with a background image CSS override."
 tags: [微服务]
 ---
 
-Here be a sample post with a custom background image. To utilize this "feature" just add the following YAML to a post's front matter.
+##微服务和数据库的关系是怎么样的？
+- n个微服务对应对应1个数据库？
+   + 坏处
+      1. 破坏了封装性,微服务之间希望只经由"一个单纯的"的接口界面相互。这样跟方便管理。
+      2. 封装性的破坏导致不容易做出"***高内聚，低耦合***"的设计。
+      3. 封装性的破坏还可以衍生出其他的坏处，这里不一一列举。....等。
+      4. 数据库性能上没有水平扩展。数据库的配置和硬件无法根据不同部分数据的不同访问的特性进行分别调优。
+   + 好处
+      1. 可以利用数据库本地事务，避免复杂的分布式事务处理。编程简单。
+      2. 无状态的服务至少做了拆分（进程级别的解耦合）。所以服务层能享受进程接耦的好处。（适配不同的硬件，更好的容错）
+- 1个微服务对应n个数据库？
+   + 坏处
+      1. 少一个数据库性能没有水平扩展。
+   + 好处
+      1. 少一个可以利用数据库本地事务。  
+- 1个微服务对应1个数据库？（或0个）
+   + 坏处
+      1. 再少了一个破坏了封装性。
+   + 好处
+      没有变化。   
+##关于贯彻微服务间的低耦合？有什么模式和技术？
+- 原则：耦合就发生在一层，一般应该是代码层。杜绝在数据层，其他层面发生耦合。好处：进一步减少耦合的复杂度，方便测试。代码的接口这些语言构建也比较容易描述清晰的耦合关系。
+- 微观层面：耦合就是自己有哪些接口会被其他微服务调用， 自己会调用其他微服务的哪些接口。至少放在各自同一个包下。配图。
 
-```yaml
-image:
-  background: filename.png
-```
+##我们对微服务间（进程间）通讯的要求是是什么？
+- 可靠。大部分微服务的消息通信都有这个要求，极少部分没有。
+   重试机制。幂等性。
+   降级措施： 隔离， 熔断， 容错。
+- 快速。不是说有的RPC都有快速的要求，比如某些事件订阅式的。
+   降级措施: 
+   超时机制.
+##微服务间异步通信
+   好处
+     异步通信，批量处理，更有效率。
+     异步通信本省节省了线程资源，效率也更高。你能想象没有中断的CPU吗？
+     异步通信可靠性更高。
+   坏处：
+     编程更复杂。
+     可能响应事件会变长。
+     经过的进程更多，协议栈更深，也影响效率。
+##如何利用我们今天的讨论设计一个高效的抢购系统?       
+     
+      
 
-This little bit of YAML makes the assumption that your background image asset is in the `/images` folder. If you place it somewhere else or are hotlinking from the web, just include the full http(s):// URL. Either way you should have a background image that is tiled.
 
-If you want to set a background image for the entire site just add `background: filename.png` to your `_config.yml` and BOOM --- background images on every page!
 
-<div xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/" about="http://subtlepatterns.com" class="notice">Background images from <span property="dct:title">Subtle Patterns</span> (<a rel="cc:attributionURL" property="cc:attributionName" href="http://subtlepatterns.com">Subtle Patterns</a>) / <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a></div>
