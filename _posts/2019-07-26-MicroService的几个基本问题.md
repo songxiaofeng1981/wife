@@ -1,7 +1,7 @@
 ---
 layout: post
 title: MicroService的几个基本问题
-description: "Sample post with a background image CSS override."
+description: "MicroService的几个基本问题"
 tags: [微服务]
 ---
 
@@ -47,5 +47,3 @@ tags: [微服务]
    + 编程更复杂。
    + 可能响应事件会变长。
    + 经过的进程更多，协议栈更深，也影响效率。
-
-### 如何利用我们今天的讨论设计一个高效的抢购系统?       
