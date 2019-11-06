@@ -2,7 +2,7 @@
 layout: post
 title: Let's go swimming
 description: "国庆节前每周2天游泳训练，国庆节去学潜水，明年买船/考证"
-tags: [冒险吧少年 体能训练]
+tags: [冒险吧少年 体能训练 生活]
 ---
 
 ### 游泳装备：
