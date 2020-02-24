@@ -5,7 +5,6 @@ description: "ServiceMesh企业应用分析"
 tags: [微服务架构 ServiceMesh Istio 高性能 高可用] 
 ---
 
-# ServiceMesh企业应用分析
 
 ## 服务网格+云原生的核心价值
 ### 从业务开发团队，运维团队，基础设施团队的接耦，接耦后提高了各团队的工作效率和质量。
@@ -63,10 +62,10 @@ tags: [微服务架构 ServiceMesh Istio 高性能 高可用]
   </figure> 
   
 ### Istio-主流ServiceMesh方案
-    <figure>
-    	<img src="/images/2020/istio_appliance/problems.png" alt="">
-    	<figcaption>痛点</figcaption>
-    </figure> 
+  <figure>
+    <img src="/images/2020/istio_appliance/problems.png" alt="">
+    <figcaption>痛点</figcaption>
+  </figure> 
  
 主要优势:
 1. 生态兼容性好，很容易和其他（如监控，分布式跟踪，策略）开源产品一起组成完整的企业后端解决方案方案。
