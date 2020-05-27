@@ -26,9 +26,9 @@ tags: [注册中心 微服务]
    ![SagaActuator](/images/lines/SagaActuator.png)   
 9. Website   
    ![WebSite](/images/lines/Website.png)   
-10. Doc
+10. Doc   
    ![Doc](/images/lines/Doc.png)       
-11. Pack
+11. Pack   
    ![Pack](/images/lines/Pack.png)
    
   
