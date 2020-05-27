@@ -31,7 +31,10 @@ tags: [注册中心 微服务]
 11. Pack   
    ![Pack](/images/lines/Pack.png)
    
-  
+## Istio
+1. IstioProxy   
+   ![IstioProxy](/images/lines/IstioProxy.png)  
+2. Istio   
     
   
   
