@@ -35,7 +35,7 @@ tags: [注册中心 微服务]
 1. IstioProxy   
    ![IstioProxy](/images/lines/IstioProxy.png)  
 2. Istio   
-    
+   ![Istio](/images/lines/Istio.png)      
   
   
   
