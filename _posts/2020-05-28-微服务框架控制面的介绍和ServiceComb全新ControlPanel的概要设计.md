@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 微服务框架控制面的介绍和ServiceComb全新的ControlPanel的概要设计
+title: 微服务框架控制面的介绍和ServiceComb全新ControlPanel的概要设计
 description: "微服务框架控制面的介绍和ServiceComb全新的ControlPanel的概要设计"
 tags: [微服务 控制面 设计] 
 ---
