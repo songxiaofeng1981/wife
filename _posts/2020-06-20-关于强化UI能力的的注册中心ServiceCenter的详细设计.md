@@ -34,7 +34,7 @@ tags: [注册中心 微服务 UI]
 目前ServiceCenter Frontend包括如下这些视图:
 * API doc: 显示当前某服务的所有的API接口列表，按Service分组。
 * API detail: 显示某API接口的Swagger UI, 显示历史的TestCase列表，可以执行某一个TestCase，显示执行结果，可以对上个执行的TestCase进行保存。
-....
+* ....
 
 ## API doc View的详细设计
 1. 接口 GET /apis  参数： Service Id, Service Version, Channel ID， 返回该Service的所有的接口的概要列表。
